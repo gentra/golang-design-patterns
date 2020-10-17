@@ -3,8 +3,8 @@ package checkout
 import (
 	"log"
 
-	"github.com/gentra/legosamples/chainofresponsibility/internal"
-	"github.com/gentra/legosamples/chainofresponsibility/internal/entity"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/entity"
 )
 
 type KYCValidation struct {

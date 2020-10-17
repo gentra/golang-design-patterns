@@ -1,8 +1,8 @@
 package provide
 
 import (
-	"github.com/gentra/legosamples/decorator/internal"
-	"github.com/gentra/legosamples/decorator/internal/repo/bookreaderrepo"
+	"github.com/gentra/golang-design-patterns/decorator/internal"
+	"github.com/gentra/golang-design-patterns/decorator/internal/repo/bookreaderrepo"
 )
 
 func BookReaderRepo(useCache bool) internal.BookReaderRepo {

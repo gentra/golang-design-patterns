@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"github.com/gentra/legosamples/decorator/internal/entity"
+	"github.com/gentra/golang-design-patterns/decorator/internal/entity"
 )
 
 type BookReaderRepo interface {

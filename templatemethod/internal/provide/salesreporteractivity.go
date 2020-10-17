@@ -1,9 +1,9 @@
 package provide
 
 import (
-	"github.com/gentra/legosamples/templatemethod/internal"
-	"github.com/gentra/legosamples/templatemethod/internal/constant"
-	"github.com/gentra/legosamples/templatemethod/internal/usecase/salesreportactivity"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal/constant"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal/usecase/salesreportactivity"
 )
 
 func SalesReporterActivity(recipient constant.SalesReportRecipient) internal.SalesReportActivity {

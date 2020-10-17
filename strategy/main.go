@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/gentra/legosamples/strategy/internal/constant"
-	"github.com/gentra/legosamples/strategy/internal/entity"
-	"github.com/gentra/legosamples/strategy/internal/provide"
+	"github.com/gentra/golang-design-patterns/strategy/internal/constant"
+	"github.com/gentra/golang-design-patterns/strategy/internal/entity"
+	"github.com/gentra/golang-design-patterns/strategy/internal/provide"
 )
 
 func main() {

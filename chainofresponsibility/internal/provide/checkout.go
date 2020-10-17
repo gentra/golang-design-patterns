@@ -1,9 +1,9 @@
 package provide
 
 import (
-	"github.com/gentra/legosamples/chainofresponsibility/internal"
-	"github.com/gentra/legosamples/chainofresponsibility/internal/constant"
-	"github.com/gentra/legosamples/chainofresponsibility/internal/usecase/checkout"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/constant"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/usecase/checkout"
 )
 
 func Checkout(coType constant.CheckoutType) internal.Checkout {

@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"github.com/gentra/legosamples/templatemethod/internal/entity"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal/entity"
 )
 
 type SalesReportActivity interface {

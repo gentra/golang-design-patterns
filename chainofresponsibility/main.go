@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/gentra/legosamples/chainofresponsibility/internal/constant"
-	"github.com/gentra/legosamples/chainofresponsibility/internal/entity"
-	"github.com/gentra/legosamples/chainofresponsibility/internal/provide"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/constant"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/entity"
+	"github.com/gentra/golang-design-patterns/chainofresponsibility/internal/provide"
 )
 
 func main() {

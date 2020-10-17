@@ -1,8 +1,8 @@
 package bookreaderrepo
 
 import (
-	"github.com/gentra/legosamples/decorator/internal"
-	"github.com/gentra/legosamples/decorator/internal/entity"
+	"github.com/gentra/golang-design-patterns/decorator/internal"
+	"github.com/gentra/golang-design-patterns/decorator/internal/entity"
 	"log"
 )
 
@@ -36,6 +36,7 @@ func (b *RedisRepo) ListBook() ([]entity.Book, error) {
 
 func getFromRedis() ([]entity.Book, error) {
 	// Let's just pretend this function fetches object from Redis
+	log.Print("Checking if data is cached on Redis")
 	return []entity.Book{
 		{
 			ID:    1,

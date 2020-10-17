@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/gentra/legosamples/decorator/internal/provide"
+	"github.com/gentra/golang-design-patterns/decorator/internal/provide"
 )
 
 func main() {

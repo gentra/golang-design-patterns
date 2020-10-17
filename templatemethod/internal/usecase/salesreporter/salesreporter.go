@@ -1,7 +1,7 @@
 package salesreporter
 
 import (
-	"github.com/gentra/legosamples/templatemethod/internal"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal"
 )
 
 type SalesReporter struct {

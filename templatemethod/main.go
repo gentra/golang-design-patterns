@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/gentra/legosamples/templatemethod/internal/constant"
-	"github.com/gentra/legosamples/templatemethod/internal/provide"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal/constant"
+	"github.com/gentra/golang-design-patterns/templatemethod/internal/provide"
 )
 
 func main() {

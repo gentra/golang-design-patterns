@@ -3,7 +3,7 @@ package shippingreadergw
 import (
 	"log"
 
-	"github.com/gentra/legosamples/strategy/internal/entity"
+	"github.com/gentra/golang-design-patterns/strategy/internal/entity"
 )
 
 type JNE struct {

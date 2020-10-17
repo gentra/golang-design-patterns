@@ -1,6 +1,6 @@
 package internal
 
-import "github.com/gentra/legosamples/chainofresponsibility/internal/entity"
+import "github.com/gentra/golang-design-patterns/chainofresponsibility/internal/entity"
 
 type Checkout interface {
 	Execute(cart *entity.Cart) error
