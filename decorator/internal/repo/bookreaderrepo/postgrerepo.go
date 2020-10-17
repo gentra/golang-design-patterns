@@ -1,17 +1,17 @@
-package postgredb
+package bookreaderrepo
 
 import (
 	"github.com/gentra/legosamples/decorator/internal/entity"
 )
 
-type BookReader struct {
+type PostgreRepo struct {
 }
 
-func NewBookReader() *BookReader {
-	return &BookReader{}
+func NewPostgreRepo() *PostgreRepo {
+	return &PostgreRepo{}
 }
 
-func (b *BookReader) ListBook() ([]entity.Book, error) {
+func (b *PostgreRepo) ListBook() ([]entity.Book, error) {
 	// Let's just pretend we do all the database fetching here
 	return []entity.Book{
 		{

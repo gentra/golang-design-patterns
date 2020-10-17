@@ -1,4 +1,4 @@
-package redis
+package bookreaderrepo
 
 import (
 	"github.com/gentra/legosamples/decorator/internal"
@@ -6,15 +6,15 @@ import (
 	"log"
 )
 
-type BookReader struct {
+type RedisRepo struct {
 	source internal.BookReaderRepo
 }
 
-func NewBookReader(source internal.BookReaderRepo) *BookReader {
-	return &BookReader{source: source}
+func NewRedisRepo(source internal.BookReaderRepo) *RedisRepo {
+	return &RedisRepo{source: source}
 }
 
-func (b *BookReader) ListBook() ([]entity.Book, error) {
+func (b *RedisRepo) ListBook() ([]entity.Book, error) {
 	books, err := getFromRedis()
 	if err == nil { // immediately return when cache-hit
 		return books, nil
