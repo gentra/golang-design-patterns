@@ -2,27 +2,20 @@ package provide
 
 import (
 	"github.com/gentra/legosamples/chainofresponsibility/internal"
+	"github.com/gentra/legosamples/chainofresponsibility/internal/constant"
 	"github.com/gentra/legosamples/chainofresponsibility/internal/usecase/checkout"
 )
 
-type CheckoutType int
-
-const (
-	CheckoutConsumer    CheckoutType = 1
-	CheckoutDistributor CheckoutType = 2
-	CheckoutBigPromo    CheckoutType = 3
-)
-
-func Checkout(typ CheckoutType) internal.Checkout {
-	switch typ {
-	case CheckoutConsumer:
+func Checkout(coType constant.CheckoutType) internal.Checkout {
+	switch coType {
+	case constant.CheckoutConsumer:
 		pay := checkout.NewPaymentPreparation() // sequence 2
 
 		product := checkout.NewProductValidation() // sequence 1
 		product.SetNext(pay)
 
 		return product
-	case CheckoutDistributor:
+	case constant.CheckoutDistributor:
 		pay := checkout.NewPaymentPreparation() // sequence 6
 
 		product := checkout.NewProductValidation() // sequence 5
@@ -41,7 +34,7 @@ func Checkout(typ CheckoutType) internal.Checkout {
 		minqty.SetNext(kyc)
 
 		return minqty
-	case CheckoutBigPromo:
+	case constant.CheckoutBigPromo:
 		pay := checkout.NewPaymentPreparation() // sequence 4
 
 		product := checkout.NewProductValidation() // sequence 3
