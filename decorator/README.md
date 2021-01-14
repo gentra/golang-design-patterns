@@ -91,6 +91,16 @@ func BookReaderRepo(useCache bool) internal.BookReaderRepo {
 	}
 }
 ```
+Then execute it
+```go
+useCache := true // Let's just pretend that you get this use-cache configuration from config files or cli param
+repo := provide.BookReaderRepo(useCache)
+
+books, err := repo.ListBook()
+if err != nil {
+    log.Println(err)
+}
+```
 
 As you can see from the code above, we are even now able to turn on/off our cache dynamically without polluting our core
 codes, all the toggle happens on a constructor. Much cleaner. In real world case, the on/off configuration might reside

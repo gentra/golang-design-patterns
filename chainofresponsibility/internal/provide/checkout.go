@@ -35,13 +35,16 @@ func Checkout(coType constant.CheckoutType) internal.Checkout {
 
 		return minqty
 	case constant.CheckoutBigPromo:
-		pay := checkout.NewPaymentPreparation() // sequence 4
+		pay := checkout.NewPaymentPreparation() // sequence 5
 
-		product := checkout.NewProductValidation() // sequence 3
+		product := checkout.NewProductValidation() // sequence 4
 		product.SetNext(pay)
 
-		fraudcheck := checkout.NewFraudCheck() // sequence 2
+		fraudcheck := checkout.NewFraudCheck() // sequence 3
 		fraudcheck.SetNext(product)
+
+		kyc := checkout.NewKYCValidation() // sequence 2
+		kyc.SetNext(kyc)
 
 		promocheck := checkout.NewPromoValidation() // sequence 1
 		promocheck.SetNext(fraudcheck)

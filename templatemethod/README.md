@@ -71,7 +71,7 @@ What needs to be done next are just defining each of our recipient detailed-proc
 * [Investor](https://github.com/gentra/golang-design-patterns/blob/master/templatemethod/internal/usecase/salesreportactivity/investor.go)
 * [Seller](https://github.com/gentra/golang-design-patterns/blob/master/templatemethod/internal/usecase/salesreportactivity/seller.go)
 
-With everything done, what's left is just making a Factory method to select which Sales-Reporter we'd want on run-time
+With everything done, what's left is just making a Factory method to select which `SalesReportActivity` we'd want on run-time
 ```go
 func SalesReporterActivity(recipient constant.SalesReportRecipient) internal.SalesReportActivity {
 	switch recipient {
@@ -89,6 +89,19 @@ func SalesReporterActivity(recipient constant.SalesReportRecipient) internal.Sal
 
 }
 ```
+Then pass it to `SalesReporter` constructor and execute it
+```go
+// Let's just pretend we get this recipient type from the higher caller in the call-stack
+recipient := constant.SalesReportForInvestor
+salesReportActivity := provide.SalesReporterActivity(recipient)
 
-Then call the function to instantiate the `SalesReportActivity`. Usually, in real-world the SalesReport selection would
+salesReporter := provide.SalesReporter()
+
+err := salesReporter.ReportSales(salesReportActivity)
+if err != nil {
+    log.Println(err)
+}
+```
+
+Usually, in real-world the SalesReport selection would
 probably come from a drop-down selection from front-end or based on user's role.

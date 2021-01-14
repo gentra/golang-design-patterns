@@ -48,6 +48,20 @@ func ShippingReaderGw(partner constant.ShippingPartner) internal.ShippingReader 
 	}
 }
 ```
+Then execute it
+```go
+shippingPartner := constant.ShippingPartnerGojek
+shippingReader := provide.ShippingReaderGw(shippingPartner)
+
+rate, err := shippingReader.GetShippingRate(entity.ShipmentPlan{
+    Origin:               "Jakarta",
+    Destination:          "Bandung",
+    ShipmentDurationDays: 3,
+})
+if err != nil {
+    log.Println(err)
+}
+```
 
 In real-world case, the partner-selection might come from user's selection of shipping-option and we might want to use a
 singleton instead of repetitively instantiating new `ShippingReader`
