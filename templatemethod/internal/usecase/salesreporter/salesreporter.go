@@ -2,6 +2,7 @@ package salesreporter
 
 import (
 	"github.com/gentra/golang-design-patterns/templatemethod/internal"
+	"log"
 )
 
 type SalesReporter struct {
@@ -31,6 +32,8 @@ func (s *SalesReporter) ReportSales(action internal.SalesReportActivity) error {
 	if err != nil {
 		return err
 	}
+
+	log.Println("Storing report activity results to dev-internal monitoring system")
 
 	return nil
 }
